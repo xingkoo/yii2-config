@@ -91,6 +91,18 @@ class Config extends Component implements IConfig
     }
 
     /**
+     * 强制刷新数据。
+     * 守护脚本情况下，当数据被异步更新后，因实例后数据被存储在临时变量_data中，导致不能正常更新数据。
+     */
+    public function referer()
+    {
+        $this->_data = null;
+        // 正常情况下，使用set方法来变更数据时，缓存的数据其实已经生效了。此处强调一下。
+        // $this->_cache->delete($this->cacheKey);
+        // $this->getData();
+    }
+
+    /**
      * Get data
      * @return array
      */

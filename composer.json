@@ -1,5 +1,5 @@
 {
-    "name": "abhi1693/yii2-config",
+    "name": "xingkoo/yii2-config",
     "description": "Yii2 manage configuration from database",
     "version": "1.0.0",
     "type": "yii2-extension",
